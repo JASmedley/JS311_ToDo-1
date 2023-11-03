@@ -1,10 +1,11 @@
 let express = require("express");
-app.use(express.static("public"))
 
 let PORT = 8001;
 
 let app = express();
 app.use(express.json()); 
+app.use(express.static("public"))
+
 
 let routes = require("./routes");
 app.use(routes);
